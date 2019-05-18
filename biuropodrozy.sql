@@ -1,19 +1,19 @@
 CREATE TABLE KATEGORIE_ZAROBKOWE
 (
-    id_kategorii_zarobkowej int NOT NULL PRIMARY KEY,
-    kategoria_zarobkowa VARCHAR(30),
+    id_kategorii_zarobkowej INT NOT NULL PRIMARY KEY,
+    kategoria_zarobkowa VARCHAR(50) NOT NULL,
 );
 
 CREATE TABLE STANY_CYWILNE
 (
-    id_stanu_cywilnego int NOT NULL PRIMARY KEY,
-    stan_cywilny VARCHAR(30),
+    id_stanu_cywilnego INT NOT NULL PRIMARY KEY,
+    stan_cywilny VARCHAR(50) NOT NULL,
 );
 
 
 CREATE TABLE KLIENCI
 (
-    id_klienta int NOT NULL PRIMARY KEY,
+    id_klienta INT NOT NULL PRIMARY KEY,
 	imie CHAR(40),
 	nazwisko VARCHAR(50),
 	adres VARCHAR(60),
@@ -21,63 +21,63 @@ CREATE TABLE KLIENCI
 	telefon CHAR(20),
 	email CHAR(35),
 	nr_dowodu CHAR(12),
-	id_kategorii_zarobkowej NCHAR(6) REFERENCES KATEGORIE_ZAROBKOWE,
-	id_stanu_cywilnego NCHAR(6) REFERENCES STANY_CYWILNE
+	id_kategorii_zarobkowej INT REFERENCES KATEGORIE_ZAROBKOWE,
+	id_stanu_cywilnego INT REFERENCES STANY_CYWILNE
 );
 
 CREATE TABLE KRAJE
 (
-	id_kraju int NOT NULL PRIMARY KEY,
-	nazwa_kraju VARCHAR(30)
+	id_kraju INT NOT NULL PRIMARY KEY,
+	nazwa_kraju VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE UMOWY
 (
-	id_umowy int NOT NULL PRIMARY KEY,
-	data DATE,
-	id_klienta NCHAR(6) REFERENCES Klienci
+	id_umowy INT NOT NULL PRIMARY KEY,
+	data DATE NOT NULL,
+	id_klienta INT REFERENCES Klienci
 );
 
-CREATE TABLE P�ATNO�CI
+CREATE TABLE PLATNOSCI
 (
-	id_p�atno�ci int NOT NULL PRIMARY KEY,
+	id_platnosci INT NOT NULL PRIMARY KEY,
 	kwota DECIMAL(10,2),
-	data_czas_p�atno�ci DATE,
+	data_czas_platnosci DATE,
 	typ VARCHAR(20),
-	id_umowy NCHAR(6) REFERENCES Umowy
+	id_umowy INT NOT NULL REFERENCES Umowy
 );
 
 CREATE TABLE OPERATORZY
 (
-	id_operatora int NOT NULL PRIMARY KEY,
-	nazwa_firmy VARCHAR(20),
-	telefon CHAR(15),
-	email CHAR(25)
+	id_operatora INT NOT NULL PRIMARY KEY,
+	nazwa_firmy VARCHAR(50) NOT NULL,
+	telefon CHAR(50) NOT NULL,
+	email CHAR(50) NOT NULL
 );
 CREATE TABLE SIECI_HOTELI
 (
-	id_sieci_hoteli int NOT NULL PRIMARY KEY,
-	nazwa_sieci VARCHAR(30)
+	id_sieci_hoteli INT NOT NULL PRIMARY KEY,
+	nazwa_sieci VARCHAR(50)
 );
 
 CREATE TABLE HOTELE
 (
-	id_hotelu int NOT NULL PRIMARY KEY,
+	id_hotelu INT NOT NULL PRIMARY KEY,
 	adres VARCHAR(60),
 	email CHAR(35),
 	telefon CHAR(20),
-	id_kraju NCHAR(6) REFERENCES KRAJE,
-	id_sieci_hotelu NCHAR(6) REFERENCES SIECI_HOTELI
+	id_kraju INT REFERENCES KRAJE,
+	id_sieci_hotelu INT REFERENCES SIECI_HOTELI
 );
 
 CREATE TABLE WYCIECZKI
 (
-	id_wycieczki int NOT NULL PRIMARY KEY,
+	id_wycieczki INT NOT NULL PRIMARY KEY,
 	cena DECIMAL(10,2),
-	data_rozpocz�cia DATE NOT NULL,
-	data_zako�czenia DATE NOT NULL,
-	id_operatora NCHAR(6) REFERENCES OPERATORZY,
-	id_umowy NCHAR(6) REFERENCES UMOWY,
-	id_hotelu NCHAR(6) REFERENCES HOTELE
+	data_rozpoczecia DATE NOT NULL,
+	data_zakonczenia DATE NOT NULL,
+	id_operatora INT REFERENCES OPERATORZY,
+	id_umowy INT REFERENCES UMOWY,
+	id_hotelu INT REFERENCES HOTELE
 );
 
