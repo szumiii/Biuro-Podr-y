@@ -10,8 +10,22 @@ FROM  dbo.SIECI_HOTELI as t1
 JOIN dbo.HOTELE as t2 on t1.id = t2.id_sieci_hotelu
 ;
 
+CREATE VIEW [dbo].[HOTELE_VIEW2] AS
+SELECT adres, email, telefon, NAZWA_KRAJU, NAZWA_SIECI
+FROM  dbo.HOTELE as t1
+JOIN dbo.KRAJE as t2 on t1.id_kraju = t2.ID
+JOIN dbo.SIECI_HOTELI as t3 on t1.id_sieci_hotelu = t3.id
+;
+
+CREATE VIEW [dbo].[WYCIECZKI_KRAJE] AS
+SELECT cena, data_rozpoczecia, data_zakonczenia, NAZWA_KRAJU
+FROM  dbo.WYCIECZKI as t1
+JOIN dbo.HOTELE as t2 on t2.id_hotelu= t1.id_hotelu
+JOIN dbo.KRAJE as t3 on t2.id_kraju = t3.ID
+;
+
 CREATE VIEW [dbo].[UMOWY_KLIENTOW] AS
-SELECT data, imie, nazwisko 
+SELECT data, imie, nazwisko
 from dbo.UMOWY as t1
 JOIN dbo.KLIENCI as t2 on t1.id_klienta = t2.id_klienta
 JOIN dbo.WYCIECZKI as t3 on t1.ID = t3.id_umowy
