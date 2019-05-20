@@ -1,7 +1,9 @@
 const faker = require('faker');
 
 const kraj = () => {
-    return faker.fake("{{address.country}}")
+    faker.locale = 'pl'
+    kraj['nazwa_kraju'] = faker.fake("{{address.country}}")
+    return kraj;
 }
 const hotel = (liczbaKrajow, liczbaSieci) => {
     const hotel = [];
@@ -28,7 +30,7 @@ const klient = (liczbaKatZarobkowej, liczbaStanuCywilnego) => {
 
     klient['imie'] = imie;
     klient['nazwisko'] = nazwisko;
-    klient['adres'] = adres;
+    klient['adres'] = adres.replace(/'/g, "");
     klient['pesel'] = pesel;
     klient['email'] = email;
     klient['telefon'] = telefon;
@@ -45,7 +47,7 @@ const operator = () => {
     telefon = faker.fake("{{phone.phoneNumberFormat}}");
     email = faker.fake(`{{internet.email(${nazwa_firmy})}}`);
 
-    operator['nazwa_firmy'] = nazwa_firmy;
+    operator['nazwa_firmy'] = nazwa_firmy.replace(/'/g, "");
     operator['telefon'] = telefon;
     operator['email'] = email;
     return operator;
@@ -56,11 +58,11 @@ const siec_hoteli = () => {
     const siec_hoteli = [];
     nazwa_sieci = faker.fake("{{company.companyName}} Hotels");
 
-    siec_hoteli['nazwa_sieci'] = nazwa_sieci;
+    siec_hoteli['nazwa_sieci'] = nazwa_sieci.replace(/'/g, "");
     return siec_hoteli;
 }
 
-const wycieczka = (liczbaOperatorow, liczbaUmow, liczbaHoteli) => {
+const wycieczka = (liczbaOperatorow, idUmowy, liczbaHoteli) => {
     const wycieczka = [];
     cena = faker.commerce.price(1000, 10000);
 
@@ -72,14 +74,13 @@ const wycieczka = (liczbaOperatorow, liczbaUmow, liczbaHoteli) => {
     const data_zakonczenia = data_rozpoczecia.addDays(dni)
 
     const id_operatora = losuj(1, liczbaOperatorow);
-    const id_umowy = losuj(1, liczbaUmow);
     const id_hotelu = losuj(1, liczbaHoteli);
 
     wycieczka['cena'] = cena;
     wycieczka['data_rozpoczecia'] = data_rozpoczecia.toISOString().slice(0, 10);
     wycieczka['data_zakonczenia'] = data_zakonczenia.toISOString().slice(0, 10);
     wycieczka['id_operatora'] = id_operatora;
-    wycieczka['id_umowy'] = id_umowy;
+    wycieczka['id_umowy'] = idUmowy;
     wycieczka['id_hotelu'] = id_hotelu;
     return wycieczka;
 }
@@ -93,18 +94,20 @@ const umowy = (liczbaKlientow) => {
 
     const id_klienta = losuj(1, liczbaKlientow)
 
-    umowy['data'] = data;
+    umowy['data'] = data.toISOString().slice(0, 10);
     umowy['id_klienta'] = id_klienta;
     return umowy;
 }
 
-const platnosci = (id, kwota, data, id_umowy) => {
+const platnosci = (kwota, data, id_umowy) => {
     const platnosci = [];
     const typ = ['karta', 'przelew', 'gotówka']
+    const dni = losuj(0, 7);
 
-    platnosci['id_platnosci'] = id;
+    const nowa_data = data.addDays(dni);
+
     platnosci['kwota'] = kwota;
-    platnosci['data'] = data;
+    platnosci['data'] = nowa_data.toISOString().slice(0, 10);
     platnosci['typ'] = typ[Math.floor(Math.random() * typ.length)];
     platnosci['id_umowy'] = id_umowy;
     return platnosci;
@@ -129,3 +132,4 @@ module.exports = {
     umowy: umowy,
     platnosci: platnosci
 }
+
