@@ -76,7 +76,7 @@ const wycieczka = (liczbaOperatorow, idUmowy, liczbaHoteli) => {
     const id_operatora = losuj(1, liczbaOperatorow);
     const id_hotelu = losuj(1, liczbaHoteli);
 
-    wycieczka['cena'] = cena;
+    wycieczka['cena'] = Math.floor(cena);
     wycieczka['data_rozpoczecia'] = data_rozpoczecia.toISOString().slice(0, 10);
     wycieczka['data_zakonczenia'] = data_zakonczenia.toISOString().slice(0, 10);
     wycieczka['id_operatora'] = id_operatora;
@@ -99,15 +99,16 @@ const umowy = (liczbaKlientow) => {
     return umowy;
 }
 
-const platnosci = (kwota, data, id_umowy) => {
+const platnosci = (kwota, id_umowy) => {
     const platnosci = [];
     const typ = ['karta', 'przelew', 'gotówka']
-    const dni = losuj(0, 7);
 
-    const nowa_data = data.addDays(dni);
+    const start = new Date('2017-05-08');
+    const koniec = new Date();
+    const data = faker.date.between(start, koniec)
 
     platnosci['kwota'] = kwota;
-    platnosci['data'] = nowa_data.toISOString().slice(0, 10);
+    platnosci['data'] = data.toISOString().slice(0, 10);
     platnosci['typ'] = typ[Math.floor(Math.random() * typ.length)];
     platnosci['id_umowy'] = id_umowy;
     return platnosci;
@@ -132,4 +133,3 @@ module.exports = {
     umowy: umowy,
     platnosci: platnosci
 }
-

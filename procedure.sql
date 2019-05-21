@@ -1,14 +1,14 @@
 CREATE PROCEDURE updateKLIENT
     @id int,
-    @imie CHAR(40) = null;
-    @nazwisko VARCHAR(50) = null;
-    @adres VARCHAR(60) =null;
-    @PESEL CHAR(15) = null,
-	@telefon CHAR(20) = null,
-	@email CHAR(35) = null,
-	@nr_dowodu CHAR(12) = null,
-	@id_kategorii_zarobkowej INT = null,
-	@id_stanu_cywilnego INT = null
+    @imie VARCHAR(50) = null,
+    @nazwisko VARCHAR(50) = null,
+    @adres VARCHAR(60) =null,
+    @PESEL VARCHAR(20) = null,
+    @telefon VARCHAR(20) = null,
+    @email VARCHAR(50) = null,
+    @nr_dowodu VARCHAR(20) = null,
+    @id_kategorii_zarobkowej INT = null,
+    @id_stanu_cywilnego INT = null
 AS
 BEGIN
     UPDATE Klienci
@@ -22,16 +22,17 @@ BEGIN
 	nr_dowodu = ISNULL(@nr_dowodu, nr_dowodu),
 	id_kategorii_zarobkowej = ISNULL(@id_kategorii_zarobkowej, id_kategorii_zarobkowej),
 	id_stanu_cywilnego = ISNULL(@id_stanu_cywilnego, id_stanu_cywilnego)
-    WHERE id_klienta = @id
+    WHERE id = @id
 END
+GO
 
 CREATE PROCEDURE updateHOTEL
     @id INT,
     @adres VARCHAR(60) = null,
-	@email CHAR(35) = null,
-	@telefon CHAR(20) = null,
-	@id_kraju INT = null,
-	@id_sieci_hotelu INT = null
+    @email VARCHAR(50) = null,
+    @telefon VARCHAR(20) = null,
+    @id_kraju INT = null,
+    @id_sieci_hotelu INT = null
 AS
 BEGIN
     UPDATE Hotele
@@ -41,17 +42,18 @@ BEGIN
 	telefon = ISNULL(@telefon,telefon),
 	id_kraju = ISNULL(@id_kraju,id_kraju),
 	id_sieci_hotelu= ISNULL(@id_sieci_hotelu,id_sieci_hotelu)
-    WHERE id_hotelu = @id
+    WHERE id = @id
 END
+GO
 
 CREATE PROCEDURE updateWYCIECZKI
     @id INT,
     @cena DECIMAL(10,2) = null,
-	@data_rozpoczecia DATE  = null,
-	@data_zakonczenia DATE  = null,
-	@id_operatora INT = null,
-	@id_umowy INT  = null,
-	@id_hotelu INT  = null
+    @data_rozpoczecia DATE  = null,
+    @data_zakonczenia DATE  = null,
+    @id_operatora INT = null,
+    @id_umowy INT  = null,
+    @id_hotelu INT  = null
 AS
 BEGIN
     UPDATE Wycieczki
@@ -62,14 +64,15 @@ BEGIN
     id_operatora = ISNULL(@id_operatora, id_operatora),
     id_umowy = ISNULL(@id_umowy, id_umowy),
     id_hotelu = ISNULL(@id_hotelu, id_hotelu)
-    WHERE id_wycieczki = @id
+    WHERE id = @id
 END
+GO
 
 CREATE PROCEDURE updateOPERATORZY
     @id INT,
-	@nazwa_firmy VARCHAR(50) = null,
-	@telefon CHAR(50) = null,
-	@email CHAR(50) = null,
+    @nazwa_firmy VARCHAR(50) = null,
+    @telefon VARCHAR(20) = null,
+    @email VARCHAR(50) = null
 AS
 BEGIN
     UPDATE Operatorzy
@@ -77,19 +80,21 @@ BEGIN
         nazwa_firmy = ISNULL(@nazwa_firmy, nazwa_firmy),
         telefon = ISNULL(@telefon, telefon),
         email = ISNULL(@email, email)
-    WHERE ID = @id
+    WHERE id = @id
 END
+GO
 
 CREATE PROCEDURE updateSIECI_HOTELI
     @id INT,
-	@nazwa_sieci VARCHAR(50) = null
+    @nazwa_sieci VARCHAR(50) = null
 AS
 BEGIN
     UPDATE Sieci_hoteli
     SET
         nazwa_sieci = ISNULL(@nazwa_sieci, nazwa_sieci)
-    WHERE ID = @id
+    WHERE id = @id
 END
+GO
 
 CREATE PROCEDURE updateKRAJ
     @id INT,
@@ -99,6 +104,7 @@ BEGIN
     UPDATE Kraje
     SET
         nazwa_kraju = ISNULL(@nazwa_kraju, nazwa_kraju)
-    WHERE ID = @id
+    WHERE id = @id
 END
+GO
 

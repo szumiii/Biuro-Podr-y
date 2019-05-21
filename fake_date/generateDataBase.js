@@ -13,21 +13,41 @@ const insertInto = (tableName, tableColumn, values) => {
     return `INSERT INTO [dbo].[${tableName}] (${tableColumn}) VALUES (${values})\r\n`;
 }
 
+const sqlFormater = (name, tab) => {
+    let keys = '';
+    let values = '';
+
+    const retValue = (v) => {
+        if (typeof v === 'string') {
+            return `'${v}'`;
+        } else {
+            return v;
+        }
+    }
+
+    for (let i in tab) {
+        keys += `${i},`
+        values += `${retValue(tab[i])},`
+    }
+
+    return `INSERT INTO [dbo].[${name}] (${keys.substring(0, keys.length - 1)}) VALUES (${values.substring(0, values.length - 1)})\r\n`;
+}
+
 const generateKategorieZarobkowe = () => {
     let text = '\r\n';
-    text += insertInto('KATEGORIE_ZAROBKOWE', 'ID,KATEGORIA_ZAROBKOWA', "1,'niska'")
-    text += insertInto('KATEGORIE_ZAROBKOWE', 'ID,KATEGORIA_ZAROBKOWA', "2,'średnia'")
-    text += insertInto('KATEGORIE_ZAROBKOWE', 'ID,KATEGORIA_ZAROBKOWA', "3,'wysoka'")
-    text += insertInto('KATEGORIE_ZAROBKOWE', 'ID,KATEGORIA_ZAROBKOWA', "4,'bardzo wysoka'")
+    text += insertInto('KATEGORIE_ZAROBKOWE', 'KATEGORIA_ZAROBKOWA', "'niska'")
+    text += insertInto('KATEGORIE_ZAROBKOWE', 'KATEGORIA_ZAROBKOWA', "'średnia'")
+    text += insertInto('KATEGORIE_ZAROBKOWE', 'KATEGORIA_ZAROBKOWA', "'wysoka'")
+    text += insertInto('KATEGORIE_ZAROBKOWE', 'KATEGORIA_ZAROBKOWA', "'bardzo wysoka'")
 
     return text;
 }
 
 const generateStanCywilny = () => {
-    let stanCywilny = insertInto('STANY_CYWILNE', 'ID,STAN_CYWILNY', "1,'kawaler/panna'");
-    stanCywilny += insertInto('STANY_CYWILNE', 'ID,STAN_CYWILNY', "2,'żonaty/mężatka'");
-    stanCywilny += insertInto('STANY_CYWILNE', 'ID,STAN_CYWILNY', "3,'rozwiedziony/rozwiedziona'");
-    stanCywilny += insertInto('STANY_CYWILNE', 'ID,STAN_CYWILNY', "4,'wdowiec/wdowa'");
+    let stanCywilny = insertInto('STANY_CYWILNE', 'STAN_CYWILNY', "'kawaler/panna'");
+    stanCywilny += insertInto('STANY_CYWILNE', 'STAN_CYWILNY', "'żonaty/mężatka'");
+    stanCywilny += insertInto('STANY_CYWILNE', 'STAN_CYWILNY', "'rozwiedziony/rozwiedziona'");
+    stanCywilny += insertInto('STANY_CYWILNE', 'STAN_CYWILNY', "'wdowiec/wdowa'");
 
     return stanCywilny;
 }
@@ -36,10 +56,8 @@ const generateKlienci = (times, liczbaKatZar, liczbaStanuCywilnego) => {
     let text = '\r\n';
     for (let i = 1; i <= times; i++) {
         const k = scheme.klient(liczbaKatZar, liczbaStanuCywilnego);
-        text += insertInto(
-            'KLIENCI',
-            'id_klienta,imie,nazwisko,adres,PESEL,telefon,email,nr_dowodu,id_kategorii_zarobkowej,id_stanu_cywilnego',
-            `${i},'${k['imie']}','${k['nazwisko']}','${k['adres']}','${k['pesel']}','${k['email']}','${k['nr_dowodu']}',${k['id_kategorii_zarobkowej']},${k['id_stanu_cywilnego']}`);
+        text += sqlFormater('KLIENCI', k)
+
     }
     return text;
 }
@@ -48,9 +66,7 @@ const generateKraje = (times) => {
     let text = '\r\n';
     for (let i = 1; i <= times; i++) {
         const k = scheme.kraj();
-        text += insertInto('KRAJE',
-            'id_kraju,nazwa_kraju',
-            `${i},'${k['nazwa_kraju']}'`);
+        text += sqlFormater('KRAJE', k)
     }
     return text;
 }
@@ -59,7 +75,7 @@ const generateSieciHoteli = (times) => {
     let text = '\r\n';
     for (let i = 1; i <= times; i++) {
         const sh = scheme.siec_hoteli();
-        text += insertInto('SIECI_HOTELI', 'nazwa_sieci', `'${sh['nazwa_sieci']}'`);
+        text += sqlFormater('SIECI_HOTELI', sh)
     }
     return text;
 }
@@ -68,10 +84,7 @@ const generateHotel = (times, liczbaKrajow, liczbaSieci) => {
     let text = '\r\n';
     for (let i = 1; i <= times; i++) {
         const h = scheme.hotel(liczbaKrajow, liczbaSieci);
-        text += insertInto(
-            'HOTELE',
-            'id_hotelu,adres,email,telefon,id_kraju,id_sieci_hotelu',
-            `${i},'${h['adres']}','${h['email']}','${h['telefon']}','${h['id_kraju']}','${h['id_sieci_hotelu']}'`);
+        text += sqlFormater('HOTELE', h)
     }
     return text;
 }
@@ -80,19 +93,14 @@ const generateUmowyPlatnosciWycieczki = (times, liczbaKlientow, liczbaOperatorow
     let text = '\r\n';
     for (let i = 1; i <= times; i++) {
         const k = scheme.umowy(liczbaKlientow);
-        text += insertInto('UMOWY',
-            'id_umowy,data,id_klienta',
-            `${i},'${k['data']}',${k['id_klienta']}`);
+        text += sqlFormater('UMOWY', k)
 
         const w = scheme.wycieczka(liczbaOperatorow, i, liczbaHoteli);
-        text += insertInto('WYCIECZKI',
-            'id_wycieczki,cena,data_rozpoczecia,data_zakonczenia,id_operatora,id_umowy,id_hotelu',
-            `${i}, ${w['cena']},'${w['data_rozpoczecia']}','${w['data_zakonczenia']}',${w['id_operatora']},${w['id_umowy']},${w['id_hotelu']}`);
+        text += sqlFormater('WYCIECZKI', w)
 
-        const p = scheme.platnosci(w['cena'], k['data'], i);
-        text += insertInto('PLATNOSCI',
-            'id_platnosci,kwota,data_czas_platnosci,typ,id_umowy ',
-            `${i},${p['kwota']},'${p['data']}','${p['typ']}',${i}`);
+        const p = scheme.platnosci(w['cena'], i);
+        text += sqlFormater('PLATNOSCI', p)
+
     }
     return text;
 }
@@ -102,21 +110,19 @@ const generateOperatorzy = (times) => {
     let text = '\r\n';
     for (let i = 1; i <= times; i++) {
         const o = scheme.operator();
-        text += insertInto(
-            'OPERATORZY',
-            'id_operatora,nazwa_firmy,telefon,email',
-            `${i},'${o['nazwa_firmy']}','${o['telefon']}','${o['email']}'`);
+        text += sqlFormater('OPERATORZY', o)
+
     }
     return text;
 }
 
 const generateAll = () => {
-    const LICZBA_OPERATOROW = 10;
+    const LICZBA_OPERATOROW = 600;
     const LICZBA_KRAJOW = 25;
-    const LICZBA_HOTELI = 30;
-    const LICZBA_SIECI_HOTELI = 5;
-    const LICZBA_WYCIECZEK = 20;
-    const LICZBA_KLIENTOW = 5;
+    const LICZBA_HOTELI = 600;
+    const LICZBA_SIECI_HOTELI = 150;
+    const LICZBA_WYCIECZEK = 10000;
+    const LICZBA_KLIENTOW = 1000;
 
 
     let all = '';
