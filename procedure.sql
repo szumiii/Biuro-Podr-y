@@ -14,14 +14,14 @@ BEGIN
     UPDATE Klienci
     SET
     imie = ISNULL(@imie, imie),
-	nazwisko = ISNULL(@nazwisko, nazwisko),
-	adres = ISNULL(@adres, adres),
-	PESEL = ISNULL(@PESEL, PESEL),
-	telefon = ISNULL(@telefon, telefon),
-	email = ISNULL(@email, email),
-	nr_dowodu = ISNULL(@nr_dowodu, nr_dowodu),
-	id_kategorii_zarobkowej = ISNULL(@id_kategorii_zarobkowej, id_kategorii_zarobkowej),
-	id_stanu_cywilnego = ISNULL(@id_stanu_cywilnego, id_stanu_cywilnego)
+  	nazwisko = ISNULL(@nazwisko, nazwisko),
+  	adres = ISNULL(@adres, adres),
+  	PESEL = ISNULL(@PESEL, PESEL),
+	  telefon = ISNULL(@telefon, telefon),
+	  email = ISNULL(@email, email),
+	  nr_dowodu = ISNULL(@nr_dowodu, nr_dowodu),
+	  id_kategorii_zarobkowej = ISNULL(@id_kategorii_zarobkowej, id_kategorii_zarobkowej),
+	  id_stanu_cywilnego = ISNULL(@id_stanu_cywilnego, id_stanu_cywilnego)
     WHERE id = @id
 END
 GO
