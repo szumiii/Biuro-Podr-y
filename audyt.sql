@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS dbo.AuditTable;
 -- AUDYTOWA TABELA
 CREATE TABLE [dbo].[AuditTable]
 (
@@ -18,7 +19,7 @@ begin
     declare
 	@ID int;
 
-    Select @ID = inserted.id_wycieczki
+    Select @ID = inserted.id
     from inserted
     insert into AuditTable
         (TableName, ChangedID, EventType,LoginName, AuditDateTime)
@@ -33,7 +34,7 @@ begin
     declare
 	@ID int;
 
-    Select @ID = inserted.id_wycieczki
+    Select @ID = inserted.id
     from inserted
     insert into AuditTable
         (TableName, ChangedID, EventType,LoginName, AuditDateTime)
@@ -49,7 +50,7 @@ begin
     declare
 	@ID int;
 
-    Select @ID = deleted.id_wycieczki
+    Select @ID = deleted.id
     from deleted
     insert into AuditTable
         (TableName, ChangedID, EventType,LoginName, AuditDateTime)
@@ -65,7 +66,7 @@ begin
     declare
 	@ID int;
 
-    Select @ID = inserted.id_hotelu
+    Select @ID = inserted.id
     from inserted
     insert into AuditTable
         (TableName, ChangedID, EventType,LoginName, AuditDateTime)
@@ -80,7 +81,7 @@ begin
     declare
 	@ID int;
 
-    Select @ID = inserted.id_hotelu
+    Select @ID = inserted.id
     from inserted
     insert into AuditTable
         (TableName, ChangedID, EventType,LoginName, AuditDateTime)
@@ -96,7 +97,7 @@ begin
     declare
 	@ID int;
 
-    Select @ID = deleted.id_hotelu
+    Select @ID = deleted.id
     from deleted
     insert into AuditTable
         (TableName, ChangedID, EventType,LoginName, AuditDateTime)
@@ -207,7 +208,7 @@ begin
     declare
 	@ID int;
 
-    Select @ID = inserted.id_klienta
+    Select @ID = inserted.id
     from inserted
     insert into AuditTable
         (TableName, ChangedID, EventType,LoginName, AuditDateTime)
@@ -222,7 +223,7 @@ begin
     declare
 	@ID int;
 
-    Select @ID = inserted.id_klienta
+    Select @ID = inserted.id
     from inserted
     insert into AuditTable
         (TableName, ChangedID, EventType,LoginName, AuditDateTime)
@@ -238,7 +239,7 @@ begin
     declare
 	@ID int;
 
-    Select @ID = deleted.id_klienta
+    Select @ID = deleted.id
     from deleted
     insert into AuditTable
         (TableName, ChangedID, EventType,LoginName, AuditDateTime)
