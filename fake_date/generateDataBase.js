@@ -55,7 +55,7 @@ const generateStanCywilny = () => {
 const generateKlienci = (times, liczbaKatZar, liczbaStanuCywilnego) => {
     let text = '\r\n';
     for (let i = 1; i <= times; i++) {
-        const k = scheme.klient(liczbaKatZar, liczbaStanuCywilnego);
+        const k = scheme.klient(liczbaKatZar, 9200000 + i, liczbaStanuCywilnego);
         text += sqlFormater('KLIENCI', k)
 
     }

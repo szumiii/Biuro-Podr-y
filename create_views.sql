@@ -1,44 +1,46 @@
-CREATE VIEW [dbo].[HOTELE_VIEW] AS
-SELECT adres, email, telefon, NAZWA_KRAJU
-FROM  dbo.HOTELE as t1
-JOIN dbo.KRAJE as t2 on t1.id_kraju = t2.ID
-;
+DROP VIEW IF EXISTS HOTELE_VIEW;
+DROP VIEW IF EXISTS WYCIECZKI_KRAJE_VIEW;
+DROP VIEW IF EXISTS WYCIECZKI_KLIENCI_VIEW;
+DROP VIEW IF EXISTS WYCIECZKI_OPERATOROW;
+DROP VIEW IF EXISTS KLIENCI_VIEW;
+GO
 
-CREATE VIEW [dbo].[HOTELE_W_SIECI] AS
-SELECT NAZWA_SIECI, adres, email, telefon
-FROM  dbo.SIECI_HOTELI as t1
-JOIN dbo.HOTELE as t2 on t1.id = t2.id_sieci_hotelu
-;
+CREATE VIEW [dbo].[KLIENCI_VIEW]
+AS
+    SELECT k.*, kz.kategoria_zarobkowa, sc.stan_cywilny
+    FROM dbo.KLIENCI as k
+        INNER JOIN dbo.KATEGORIE_ZAROBKOWE as kz on k.id_kategorii_zarobkowej = kz.id
+        INNER JOIN dbo.STANY_CYWILNE as sc on k.id_stanu_cywilnego = sc.id
+GO
 
-CREATE VIEW [dbo].[HOTELE_VIEW2] AS
-SELECT adres, email, telefon, NAZWA_KRAJU, NAZWA_SIECI
-FROM  dbo.HOTELE as t1
-JOIN dbo.KRAJE as t2 on t1.id_kraju = t2.ID
-JOIN dbo.SIECI_HOTELI as t3 on t1.id_sieci_hotelu = t3.id
-;
+CREATE VIEW [dbo].[HOTELE_VIEW]
+AS
+    SELECT adres, email, telefon, NAZWA_KRAJU, NAZWA_SIECI
+    FROM dbo.HOTELE as t1
+        JOIN dbo.KRAJE as t2 on t1.id_kraju = t2.id
+        JOIN dbo.SIECI_HOTELI as t3 on t1.id_sieci_hotelu = t3.id
+GO
 
-CREATE VIEW [dbo].[WYCIECZKI_KRAJE] AS
-SELECT cena, data_rozpoczecia, data_zakonczenia, NAZWA_KRAJU
-FROM  dbo.WYCIECZKI as t1
-JOIN dbo.HOTELE as t2 on t2.id_hotelu= t1.id_hotelu
-JOIN dbo.KRAJE as t3 on t2.id_kraju = t3.ID
-;
+CREATE VIEW [dbo].[WYCIECZKI_KRAJE_VIEW]
+AS
+    SELECT cena, data_rozpoczecia, data_zakonczenia, NAZWA_KRAJU
+    FROM dbo.WYCIECZKI as t1
+        JOIN dbo.HOTELE as t2 on t2.id= t1.id_hotelu
+        JOIN dbo.KRAJE as t3 on t2.id_kraju = t3.ID
+GO
 
-CREATE VIEW [dbo].[UMOWY_KLIENTOW] AS
-SELECT data, imie, nazwisko
-from dbo.UMOWY as t1
-JOIN dbo.KLIENCI as t2 on t1.id_klienta = t2.id_klienta
-JOIN dbo.WYCIECZKI as t3 on t1.ID = t3.id_umowy
-;
+CREATE VIEW [dbo].[WYCIECZKI_KLIENCI_VIEW]
+AS
+    SELECT w.cena, w.data_rozpoczecia, w.data_zakonczenia, k.*
+    FROM WYCIECZKI as w
+        INNER JOIN dbo.UMOWY as u on w.id_umowy = u.id
+        INNER JOIN dbo.KLIENCI_VIEW as k on u.id_klienta = k.id
+GO
 
-CREATE VIEW [dbo].[WYCIECZKI_OPERATOROW] AS
-SELECT NAZWA_FIRMY,TELEFON,EMAIL, cena,data_rozpoczecia,data_zakonczenia
-from dbo.OPERATORZY as t1
-JOIN dbo.WYCIECZKI as t2 on t1.ID = t2.id_operatora
-;
+CREATE VIEW [dbo].[WYCIECZKI_OPERATOROW]
+AS
+    SELECT NAZWA_FIRMY, TELEFON, EMAIL, cena, data_rozpoczecia, data_zakonczenia
+    from dbo.OPERATORZY as t1
+        JOIN dbo.WYCIECZKI as t2 on t1.ID = t2.id_operatora
+GO
 
-CREATE VIEW [dbo].[ZAROBKI_KLIENTOW] AS
-SELECT imie, nazwisko, pesel, kategoria_zarobkowa
-from dbo.KLIENCI as t1
-JOIN dbo.KATEGORIE_ZAROBKOWE as t2 on t1.id_kategorii_zarobkowej = t2.ID
-;

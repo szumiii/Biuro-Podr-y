@@ -18,12 +18,11 @@ const hotel = (liczbaKrajow, liczbaSieci) => {
     hotel['id_sieci_hotelu'] = losuj(1, liczbaSieci);
     return hotel;
 }
-const klient = (liczbaKatZarobkowej, liczbaStanuCywilnego) => {
+const klient = (liczbaKatZarobkowej, pesel, liczbaStanuCywilnego) => {
     const klient = [];
     imie = faker.fake("{{name.firstName}}");
     nazwisko = faker.fake("{{name.lastName}}");
     adres = faker.fake("{{address.city}} {{address.streetAddress(true)}}");
-    pesel = losuj(6000001234, 2200001234);
     email = faker.fake(`{{internet.email(${imie})}}`);
     telefon = faker.fake("{{phone.phoneNumberFormat}}");
     nr_dowodu = faker.fake("{{random.alphaNumeric(3)}}{{random.number}}");
