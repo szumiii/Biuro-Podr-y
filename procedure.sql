@@ -1,3 +1,12 @@
+DROP PROCEDURE IF EXISTS updateKLIENT;
+DROP PROCEDURE IF EXISTS updateHOTEL;
+DROP PROCEDURE IF EXISTS updateWYCIECZKA;
+DROP PROCEDURE IF EXISTS updateOPERATOR;
+DROP PROCEDURE IF EXISTS updateSIECI_HOTELI;
+DROP PROCEDURE IF EXISTS updateKRAJ;
+
+
+
 CREATE PROCEDURE updateKLIENT
     @id int,
     @imie VARCHAR(50) = null,
@@ -17,11 +26,11 @@ BEGIN
   	nazwisko = ISNULL(@nazwisko, nazwisko),
   	adres = ISNULL(@adres, adres),
   	PESEL = ISNULL(@PESEL, PESEL),
-	  telefon = ISNULL(@telefon, telefon),
-	  email = ISNULL(@email, email),
-	  nr_dowodu = ISNULL(@nr_dowodu, nr_dowodu),
-	  id_kategorii_zarobkowej = ISNULL(@id_kategorii_zarobkowej, id_kategorii_zarobkowej),
-	  id_stanu_cywilnego = ISNULL(@id_stanu_cywilnego, id_stanu_cywilnego)
+	telefon = ISNULL(@telefon, telefon),
+	email = ISNULL(@email, email),
+    nr_dowodu = ISNULL(@nr_dowodu, nr_dowodu),
+	id_kategorii_zarobkowej = ISNULL(@id_kategorii_zarobkowej, id_kategorii_zarobkowej),
+	id_stanu_cywilnego = ISNULL(@id_stanu_cywilnego, id_stanu_cywilnego)
     WHERE id = @id
 END
 GO
@@ -46,7 +55,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE updateWYCIECZKI
+CREATE PROCEDURE updateWYCIECZKA
     @id INT,
     @cena DECIMAL(10,2) = null,
     @data_rozpoczecia DATE  = null,
@@ -68,7 +77,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE updateOPERATORZY
+CREATE PROCEDURE updateOPERATOR
     @id INT,
     @nazwa_firmy VARCHAR(50) = null,
     @telefon VARCHAR(20) = null,
@@ -107,3 +116,4 @@ BEGIN
     WHERE id = @id
 END
 GO
+
