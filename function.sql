@@ -16,14 +16,14 @@ WHERE cena > @cena
 )
 GO
 
-CREATE FUNCTION [dbo].[wycieczkiOperatorowCzasTrwania](@lidzbaDni int)
+CREATE FUNCTION [dbo].[wycieczkiOperatorowCzasTrwania](@liczbaDni int)
 RETURNS TABLE
 AS
 RETURN(
     SELECT NAZWA_FIRMY, TELEFON, EMAIL, cena, DATEDIFF(day,data_rozpoczecia,data_zakonczenia) as liczbaDni
 from dbo.OPERATORZY as t1
     JOIN dbo.WYCIECZKI as t2 on t1.ID = t2.id_operatora
-WHERE DATEDIFF(day,data_rozpoczecia,data_zakonczenia) > @lidzbaDni
+WHERE DATEDIFF(day,data_rozpoczecia,data_zakonczenia) >= @liczbaDni
 )
 GO
 

@@ -7,7 +7,7 @@ GO
 
 CREATE VIEW [dbo].[KLIENCI_VIEW]
 AS
-    SELECT k.*, kz.kategoria_zarobkowa, sc.stan_cywilny
+    SELECT k.id, k.imie, k.nazwisko, k.adres, k.pesel, k.telefon, k.email, k.nr_dowodu, kz.kategoria_zarobkowa, sc.stan_cywilny
     FROM dbo.KLIENCI as k
         INNER JOIN dbo.KATEGORIE_ZAROBKOWE as kz on k.id_kategorii_zarobkowej = kz.id
         INNER JOIN dbo.STANY_CYWILNE as sc on k.id_stanu_cywilnego = sc.id

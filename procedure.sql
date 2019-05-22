@@ -11,10 +11,10 @@ CREATE PROCEDURE updateKLIENT
     @id int,
     @imie VARCHAR(50) = null,
     @nazwisko VARCHAR(50) = null,
-    @adres VARCHAR(60) =null,
+    @adres VARCHAR(100) =null,
     @PESEL VARCHAR(20) = null,
     @telefon VARCHAR(20) = null,
-    @email VARCHAR(50) = null,
+    @email VARCHAR(100) = null,
     @nr_dowodu VARCHAR(20) = null,
     @id_kategorii_zarobkowej INT = null,
     @id_stanu_cywilnego INT = null
@@ -37,8 +37,8 @@ GO
 
 CREATE PROCEDURE updateHOTEL
     @id INT,
-    @adres VARCHAR(60) = null,
-    @email VARCHAR(50) = null,
+    @adres VARCHAR(100) = null,
+    @email VARCHAR(100) = null,
     @telefon VARCHAR(20) = null,
     @id_kraju INT = null,
     @id_sieci_hotelu INT = null
@@ -79,9 +79,9 @@ GO
 
 CREATE PROCEDURE updateOPERATOR
     @id INT,
-    @nazwa_firmy VARCHAR(50) = null,
+    @nazwa_firmy VARCHAR(100) = null,
     @telefon VARCHAR(20) = null,
-    @email VARCHAR(50) = null
+    @email VARCHAR(100) = null
 AS
 BEGIN
     UPDATE Operatorzy
@@ -95,7 +95,7 @@ GO
 
 CREATE PROCEDURE updateSIECI_HOTELI
     @id INT,
-    @nazwa_sieci VARCHAR(50) = null
+    @nazwa_sieci VARCHAR(100) = null
 AS
 BEGIN
     UPDATE Sieci_hoteli
