@@ -1,0 +1,600 @@
+<SIEC_HOTELI>
+  <id>1</id>
+  <nazwa_sieci>OKon Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>2</id>
+  <nazwa_sieci>Lindgren and Sons Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>3</id>
+  <nazwa_sieci>Lemke - Gerhold Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>4</id>
+  <nazwa_sieci>Breitenberg Group Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>5</id>
+  <nazwa_sieci>Anderson - Bode Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>6</id>
+  <nazwa_sieci>Gusikowski LLC Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>7</id>
+  <nazwa_sieci>Quigley, Langosh and Kovacek Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>8</id>
+  <nazwa_sieci>Schmeler, Hane and Smitham Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>9</id>
+  <nazwa_sieci>Morar - Krajcik Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>10</id>
+  <nazwa_sieci>Feeney - Kunde Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>11</id>
+  <nazwa_sieci>Rutherford and Sons Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>12</id>
+  <nazwa_sieci>MacGyver - Ziemann Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>13</id>
+  <nazwa_sieci>Veum Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>14</id>
+  <nazwa_sieci>Sporer, Braun and Simonis Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>15</id>
+  <nazwa_sieci>Bartell - Dach Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>16</id>
+  <nazwa_sieci>McLaughlin, Barton and Predovic Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>17</id>
+  <nazwa_sieci>Schmitt and Sons Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>18</id>
+  <nazwa_sieci>Wehner, Wehner and Schultz Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>19</id>
+  <nazwa_sieci>Johns and Sons Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>20</id>
+  <nazwa_sieci>Stamm - Crooks Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>21</id>
+  <nazwa_sieci>Wilkinson - OReilly Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>22</id>
+  <nazwa_sieci>Sauer LLC Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>23</id>
+  <nazwa_sieci>Champlin, Conroy and Schowalter Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>24</id>
+  <nazwa_sieci>Schumm Group Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>25</id>
+  <nazwa_sieci>Mraz, Runolfsdottir and Casper Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>26</id>
+  <nazwa_sieci>Emmerich, Homenick and Murray Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>27</id>
+  <nazwa_sieci>Gottlieb - Effertz Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>28</id>
+  <nazwa_sieci>OKon - Rosenbaum Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>29</id>
+  <nazwa_sieci>Schmeler, Effertz and Schiller Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>30</id>
+  <nazwa_sieci>Reynolds, Anderson and Dare Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>31</id>
+  <nazwa_sieci>Skiles LLC Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>32</id>
+  <nazwa_sieci>Bogan LLC Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>33</id>
+  <nazwa_sieci>Schamberger, Torphy and Kutch Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>34</id>
+  <nazwa_sieci>Gerhold, Schmeler and Cruickshank Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>35</id>
+  <nazwa_sieci>Oberbrunner, Smitham and Shanahan Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>36</id>
+  <nazwa_sieci>Kovacek - Rohan Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>37</id>
+  <nazwa_sieci>Hagenes - Torp Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>38</id>
+  <nazwa_sieci>Adams - Homenick Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>39</id>
+  <nazwa_sieci>Borer Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>40</id>
+  <nazwa_sieci>Funk - Doyle Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>41</id>
+  <nazwa_sieci>Hamill, Lynch and Shanahan Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>42</id>
+  <nazwa_sieci>Friesen Group Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>43</id>
+  <nazwa_sieci>Lowe, Corkery and Grant Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>44</id>
+  <nazwa_sieci>Moore, Vandervort and Stanton Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>45</id>
+  <nazwa_sieci>Ullrich - Carter Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>46</id>
+  <nazwa_sieci>Price - Heidenreich Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>47</id>
+  <nazwa_sieci>Cartwright, Johns and Wunsch Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>48</id>
+  <nazwa_sieci>Ankunding - Lockman Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>49</id>
+  <nazwa_sieci>McClure, Erdman and Halvorson Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>50</id>
+  <nazwa_sieci>Skiles, Hodkiewicz and DuBuque Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>51</id>
+  <nazwa_sieci>Moen and Sons Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>52</id>
+  <nazwa_sieci>Littel, Oberbrunner and Connelly Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>53</id>
+  <nazwa_sieci>Wiza, VonRueden and Franecki Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>54</id>
+  <nazwa_sieci>Goldner and Sons Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>55</id>
+  <nazwa_sieci>Hahn LLC Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>56</id>
+  <nazwa_sieci>Keeling Group Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>57</id>
+  <nazwa_sieci>Shanahan Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>58</id>
+  <nazwa_sieci>Botsford, Kilback and Purdy Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>59</id>
+  <nazwa_sieci>Champlin, Hettinger and Hartmann Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>60</id>
+  <nazwa_sieci>Kuhic - Dickinson Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>61</id>
+  <nazwa_sieci>Kshlerin, Waters and Bauch Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>62</id>
+  <nazwa_sieci>Brown, Dickinson and Littel Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>63</id>
+  <nazwa_sieci>Lindgren, Little and Welch Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>64</id>
+  <nazwa_sieci>West, Mayert and Strosin Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>65</id>
+  <nazwa_sieci>Turcotte, Renner and Cronin Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>66</id>
+  <nazwa_sieci>Nikolaus, Runolfsson and Thompson Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>67</id>
+  <nazwa_sieci>Fay - Bahringer Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>68</id>
+  <nazwa_sieci>Kassulke - Collier Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>69</id>
+  <nazwa_sieci>Wisozk - Mraz Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>70</id>
+  <nazwa_sieci>Raynor Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>71</id>
+  <nazwa_sieci>Boyle Group Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>72</id>
+  <nazwa_sieci>Konopelski - Flatley Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>73</id>
+  <nazwa_sieci>Reilly, Cummerata and Nienow Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>74</id>
+  <nazwa_sieci>Walter - Waelchi Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>75</id>
+  <nazwa_sieci>Kemmer and Sons Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>76</id>
+  <nazwa_sieci>Erdman, Bailey and Shanahan Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>77</id>
+  <nazwa_sieci>Kutch Group Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>78</id>
+  <nazwa_sieci>Hamill, Daugherty and DuBuque Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>79</id>
+  <nazwa_sieci>Oberbrunner Group Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>80</id>
+  <nazwa_sieci>Purdy - Rice Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>81</id>
+  <nazwa_sieci>Pfannerstill and Sons Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>82</id>
+  <nazwa_sieci>Gerhold - Feeney Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>83</id>
+  <nazwa_sieci>Kshlerin, Littel and Vandervort Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>84</id>
+  <nazwa_sieci>Jerde, Maggio and Goodwin Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>85</id>
+  <nazwa_sieci>Murray - Cremin Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>86</id>
+  <nazwa_sieci>Beier, Torphy and Bednar Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>87</id>
+  <nazwa_sieci>Hettinger Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>88</id>
+  <nazwa_sieci>Rolfson - Hammes Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>89</id>
+  <nazwa_sieci>Renner Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>90</id>
+  <nazwa_sieci>Cole and Sons Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>91</id>
+  <nazwa_sieci>Spencer, Friesen and Schamberger Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>92</id>
+  <nazwa_sieci>Goodwin, Hackett and Eichmann Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>93</id>
+  <nazwa_sieci>Casper, Lindgren and Cronin Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>94</id>
+  <nazwa_sieci>Hudson - Thiel Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>95</id>
+  <nazwa_sieci>Goldner, Bednar and Bernhard Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>96</id>
+  <nazwa_sieci>Walker - OConnell Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>97</id>
+  <nazwa_sieci>Davis Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>98</id>
+  <nazwa_sieci>Leannon, Kiehn and Cremin Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>99</id>
+  <nazwa_sieci>Shields, Swift and Reichel Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>100</id>
+  <nazwa_sieci>Hyatt, Turcotte and Conroy Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>101</id>
+  <nazwa_sieci>Gaylord and Sons Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>102</id>
+  <nazwa_sieci>Rutherford - Hudson Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>103</id>
+  <nazwa_sieci>Hansen, Stanton and Hand Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>104</id>
+  <nazwa_sieci>Conn and Sons Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>105</id>
+  <nazwa_sieci>Ondricka, Russel and Hartmann Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>106</id>
+  <nazwa_sieci>Kulas - Schuster Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>107</id>
+  <nazwa_sieci>Franecki, Kertzmann and Fritsch Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>108</id>
+  <nazwa_sieci>Luettgen, Marks and Hirthe Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>109</id>
+  <nazwa_sieci>Feil, Bahringer and Nolan Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>110</id>
+  <nazwa_sieci>Lueilwitz Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>111</id>
+  <nazwa_sieci>Shields, Harvey and Effertz Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>112</id>
+  <nazwa_sieci>Ratke - Corwin Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>113</id>
+  <nazwa_sieci>Emmerich LLC Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>114</id>
+  <nazwa_sieci>McGlynn Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>115</id>
+  <nazwa_sieci>Upton, McClure and Kuphal Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>116</id>
+  <nazwa_sieci>Schoen - Willms Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>117</id>
+  <nazwa_sieci>Kerluke, Batz and Huel Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>118</id>
+  <nazwa_sieci>Volkman - Bernhard Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>119</id>
+  <nazwa_sieci>Keebler - Daniel Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>120</id>
+  <nazwa_sieci>Greenfelder - Moen Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>121</id>
+  <nazwa_sieci>Kihn - Welch Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>122</id>
+  <nazwa_sieci>Steuber, Monahan and Daugherty Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>123</id>
+  <nazwa_sieci>Schmitt - Osinski Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>124</id>
+  <nazwa_sieci>Kemmer Group Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>125</id>
+  <nazwa_sieci>Jakubowski LLC Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>126</id>
+  <nazwa_sieci>Romaguera, Mann and Ledner Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>127</id>
+  <nazwa_sieci>Ebert - Doyle Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>128</id>
+  <nazwa_sieci>Farrell - Schuppe Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>129</id>
+  <nazwa_sieci>Mosciski, Osinski and Waters Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>130</id>
+  <nazwa_sieci>Larkin LLC Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>131</id>
+  <nazwa_sieci>Tillman, Braun and Schoen Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>132</id>
+  <nazwa_sieci>Kiehn - Wisozk Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>133</id>
+  <nazwa_sieci>Hintz, Rolfson and Mann Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>134</id>
+  <nazwa_sieci>Bernier Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>135</id>
+  <nazwa_sieci>Kemmer LLC Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>136</id>
+  <nazwa_sieci>Bahringer - Kilback Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>137</id>
+  <nazwa_sieci>Pagac LLC Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>138</id>
+  <nazwa_sieci>Smitham - Deckow Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>139</id>
+  <nazwa_sieci>OConner Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>140</id>
+  <nazwa_sieci>Goldner - Corwin Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>141</id>
+  <nazwa_sieci>Parisian Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>142</id>
+  <nazwa_sieci>Gaylord, Bednar and Baumbach Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>143</id>
+  <nazwa_sieci>Zemlak Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>144</id>
+  <nazwa_sieci>Blick Group Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>145</id>
+  <nazwa_sieci>Windler Inc Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>146</id>
+  <nazwa_sieci>Russel LLC Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>147</id>
+  <nazwa_sieci>Powlowski - Hammes Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>148</id>
+  <nazwa_sieci>Murphy, Doyle and Lueilwitz Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>149</id>
+  <nazwa_sieci>Marks, Haley and Schultz Hotels</nazwa_sieci>
+</SIEC_HOTELI>
+<SIEC_HOTELI>
+  <id>150</id>
+  <nazwa_sieci>Okuneva, Hettinger and Haley Hotels</nazwa_sieci>
+</SIEC_HOTELI>
